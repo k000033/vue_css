@@ -1,30 +1,62 @@
 <script>
-import { reactive } from "@vue/reactivity";
+import { reactive, ref } from "@vue/reactivity";
 import { useRouter, useRoute } from "vue-router";
-import { onMounted } from "@vue/runtime-core";
+import { defineAsyncComponent, onMounted } from "@vue/runtime-core";
 import { useStore } from "vuex";
+import axios from "axios";
 export default {
+  components: {
+    NO0001: defineAsyncComponent(() => import("../views/Course/NO0001.vue")),
+    NO0002: defineAsyncComponent(() => import("../views/Course/NO0002.vue")),
+  },
   setup() {
-    const linkArray = reactive({});
-    const store = useStore();
-    const router = useRouter;
+    const course_id = ref("NO0002");
 
-    onMounted(() => {
-      store.dispatch("fetchLinkObject");
-    });
-    return { linkArray };
+    const link_click = (id) => {
+      course_id.value = id;
+    };
+    return { link_click, course_id };
   },
 };
 </script>
 
 <template>
   <div>
-    <!-- <nav>
-      <a v-for="(item, key) in linkArray" key="e" @click="link_click('N')"
-        >圖文滿版區塊 NO001</a
-      >
-    </nav> -->
+    <div class="header">
+      <div class="container">
+        <nav>
+          <a @click="link_click('NO0001')">圖文滿版區塊</a>
+          <a @click="link_click('NO0002')">互動圖文卡片</a>
+        </nav>
+        <div class="tst">ddddd</div>
+      </div>
+    </div>
+    <div class="components">
+      <component :is="course_id"></component>
+    </div>
   </div>
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+.header {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  .container {
+    height: 70px;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    a {
+      padding: 4px 12px;
+    }
+    .tst {
+      margin-left: auto;
+    }
+  }
+}
+.components {
+  height: calc(100vh - 70px);
+}
+</style>

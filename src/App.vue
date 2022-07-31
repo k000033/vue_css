@@ -1,6 +1,13 @@
 <template>
-  <div id="nav"><router-link to="/">Home</router-link> |</div>
   <router-view />
 </template>
 
-<style></style>
+<style>
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Noto Sans TC", sans-serif;
+}
+</style>

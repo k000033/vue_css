@@ -1,6 +1,7 @@
 import {
-    linkObject
-} from './Link'
+    useDefAxios
+} from './defAxios'
 
 
-export const apiLinkObject = linkObject
+
+export const apiUseDefAxios = useDefAxios;
