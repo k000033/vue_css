@@ -8,6 +8,7 @@ export default {
   components: {
     NO0001: defineAsyncComponent(() => import("../views/Course/NO0001.vue")),
     NO0002: defineAsyncComponent(() => import("../views/Course/NO0002.vue")),
+    NO0003: defineAsyncComponent(() => import("../views/Course/NO0003.vue")),
   },
   setup() {
     const course_id = ref("NO0002");
@@ -27,6 +28,7 @@ export default {
         <nav>
           <a @click="link_click('NO0001')">圖文滿版區塊</a>
           <a @click="link_click('NO0002')">互動圖文卡片</a>
+          <a @click="link_click('NO0003')">人員介紹卡片</a>
         </nav>
         <div class="tst">ddddd</div>
       </div>
