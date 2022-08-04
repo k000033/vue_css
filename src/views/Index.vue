@@ -9,6 +9,9 @@ export default {
     NO0001: defineAsyncComponent(() => import("../views/Course/NO0001.vue")),
     NO0002: defineAsyncComponent(() => import("../views/Course/NO0002.vue")),
     NO0003: defineAsyncComponent(() => import("../views/Course/NO0003.vue")),
+    NO0004: defineAsyncComponent(() => import("../views/Course/NO0004.vue")),
+    NO0005: defineAsyncComponent(() => import("../views/Course/NO0005.vue")),
+    NO0006: defineAsyncComponent(() => import("../views/Course/NO0006.vue")),
   },
   setup() {
     const course_id = ref("NO0002");
@@ -29,6 +32,9 @@ export default {
           <a @click="link_click('NO0001')">圖文滿版區塊</a>
           <a @click="link_click('NO0002')">互動圖文卡片</a>
           <a @click="link_click('NO0003')">人員介紹卡片</a>
+          <a @click="link_click('NO0004')">交錯漂浮版</a>
+          <a @click="link_click('NO0005')">超通用橫式版面</a>
+          <a @click="link_click('NO0006')">網頁頁尾版塊</a>
         </nav>
         <div class="tst">ddddd</div>
       </div>
@@ -59,6 +65,6 @@ export default {
   }
 }
 .components {
-  height: calc(100vh - 70px);
+  // height: calc(100vh - 70px);
 }
 </style>

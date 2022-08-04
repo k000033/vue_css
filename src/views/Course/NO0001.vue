@@ -27,7 +27,7 @@ export default {
 <style lang="scss" scoped>
 .banner {
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 70px);
   background-color: #ccc;
   background: linear-gradient(115deg, #7df 50%, transparent 50%) center
       center/100% 100%,

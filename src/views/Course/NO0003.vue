@@ -46,7 +46,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: calc(100vh - 70px);
   margin: auto;
 
   .item {

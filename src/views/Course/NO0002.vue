@@ -48,7 +48,7 @@ export default {};
 .warp {
   display: flex;
   align-items: center;
-  height: 100%;
+  height: calc(100vh - 70px);
   background: #000;
   .item {
     width: 25%;
