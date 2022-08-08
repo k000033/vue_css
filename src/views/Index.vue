@@ -12,6 +12,9 @@ export default {
     NO0004: defineAsyncComponent(() => import("../views/Course/NO0004.vue")),
     NO0005: defineAsyncComponent(() => import("../views/Course/NO0005.vue")),
     NO0006: defineAsyncComponent(() => import("../views/Course/NO0006.vue")),
+    NO0007: defineAsyncComponent(() => import("../views/Course/NO0007.vue")),
+    NO0008: defineAsyncComponent(() => import("../views/Course/NO0008.vue")),
+    NO0009: defineAsyncComponent(() => import("../views/Course/NO0009.vue")),
   },
   setup() {
     const course_id = ref("NO0002");
@@ -35,6 +38,9 @@ export default {
           <a @click="link_click('NO0004')">交錯漂浮版</a>
           <a @click="link_click('NO0005')">超通用橫式版面</a>
           <a @click="link_click('NO0006')">網頁頁尾版塊</a>
+          <a @click="link_click('NO0007')">網站麵包屑</a>
+          <a @click="link_click('NO0008')">方塊酥版面</a>
+          <a @click="link_click('NO0009')">破格設定</a>
         </nav>
         <div class="tst">ddddd</div>
       </div>
